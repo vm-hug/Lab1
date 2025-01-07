@@ -26,7 +26,15 @@ class MainActivity : AppCompatActivity() {
 
     private fun xuly() {
         binding.btnRamdom.setOnClickListener{
-            var soRamdom = Random.nextInt(0, 100)
+            var soRamdom = Random.nextInt(1, 7)
+            when(soRamdom) {
+                1 -> binding.imgRandom.setImageResource(R.drawable.dice_1)
+                2 -> binding.imgRandom.setImageResource(R.drawable.dice_2)
+                3 -> binding.imgRandom.setImageResource(R.drawable.dice_3)
+                4 -> binding.imgRandom.setImageResource(R.drawable.dice_4)
+                5 -> binding.imgRandom.setImageResource(R.drawable.dice_5)
+                6 -> binding.imgRandom.setImageResource(R.drawable.dice_6)
+            }
             binding.txtRamdom.setText(soRamdom.toString())
         }
     }
